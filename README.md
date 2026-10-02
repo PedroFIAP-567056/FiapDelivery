@@ -71,62 +71,6 @@ num diff.
 
 ![diagrama](./image.png)
 
-```mermaid
-classDiagram
-    class Veiculo {
-        <<abstract>>
-        -String placa
-        -double capacidadeKg
-        #Veiculo(String, double)
-        +getPlaca() String
-        +getCapacidadeKg() double
-        +podeTransportar(Pacote) boolean
-        +getTipo()* String
-    }
-    class Caminhao {
-        -int eixos
-        +Caminhao(String, double, int)
-        +getEixos() int
-        +getTipo() String
-    }
-    class Moto {
-        -boolean bau
-        +Moto(String, double, boolean)
-        +temBau() boolean
-        +getTipo() String
-    }
-    class Pacote {
-        -String codigo
-        -double pesoKg
-        -StatusPacote status
-        +Pacote(String, double)
-        +getCodigo() String
-        +getPesoKg() double
-        +getStatus() StatusPacote
-        +atualizarStatus(StatusPacote) void
-    }
-    class Rota {
-        -Veiculo veiculo
-        -Pacote pacote
-        +Rota(Veiculo, Pacote)
-        +getVeiculo() Veiculo
-        +getPacote() Pacote
-        +despachar() void
-        +entregar() void
-    }
-    class StatusPacote {
-        <<enumeration>>
-        PENDENTE
-        EM_TRANSITO
-        ENTREGUE
-    }
-    Veiculo <|-- Caminhao
-    Veiculo <|-- Moto
-    Rota "1" --> "1" Veiculo : veiculo
-    Rota "1" --> "1" Pacote : pacote
-    Pacote "1" --> "1" StatusPacote : status
-```
-
 ## Estrutura
 
 ```

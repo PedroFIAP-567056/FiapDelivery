@@ -1,0 +1,28 @@
+# Build
+bin/
+out/
+*.class
+
+# Eclipse (projeto fica, workspace nao)
+.metadata/
+.recommenders/
+.settings/
+
+# IntelliJ / NetBeans / VS Code
+.idea/
+*.iml
+nbproject/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Astah backups
+*.asta~
+*.jude~
+.astah/
+
+# Logs
+*.log
+*.tmp
